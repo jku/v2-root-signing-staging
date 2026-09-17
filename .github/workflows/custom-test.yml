@@ -53,6 +53,7 @@ jobs:
           overwrite: true
 
   cosign:
+    continue-on-error: true # until confirmed ML-DSA support for TUF
     permissions:
       id-token: 'write' # For signing with the GitHub workflow identity
     runs-on: ubuntu-latest
@@ -83,6 +84,7 @@ jobs:
               artifact
 
   cosign-old-version:
+    continue-on-error: true # until confirmed ML-DSA support for TUF
     permissions:
       id-token: 'write' # For signing with the GitHub workflow identity
     runs-on: ubuntu-latest
@@ -117,6 +119,7 @@ jobs:
               artifact
 
   sigstore-go:
+    continue-on-error: true # until confirmed ML-DSA support for TUF
     runs-on: ubuntu-latest
     needs: [sigstore-python]
     steps:
@@ -148,6 +151,7 @@ jobs:
               artifact.sigstore.json
 
   sigstore-js:
+    continue-on-error: true # until confirmed ML-DSA support for TUF
     runs-on: ubuntu-latest
     needs: [sigstore-python]
     steps:
@@ -177,6 +181,7 @@ jobs:
               artifact-rekor1.sigstore.json
 
   sigstore-java:
+    continue-on-error: true # until confirmed ML-DSA support for TUF
     runs-on: ubuntu-latest
     needs: [sigstore-python]
     steps:
@@ -219,6 +224,7 @@ jobs:
               artifact
 
   sigstore-rust:
+    continue-on-error: true # until confirmed ML-DSA support for TUF
     permissions:
       id-token: 'write' # For signing with the GitHub workflow identity
     runs-on: ubuntu-latest
