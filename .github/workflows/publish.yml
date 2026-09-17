@@ -50,7 +50,7 @@ jobs:
     uses: ./.github/workflows/deploy-to-gcs.yml
     with:
       gcp_workload_identity_provider: 'projects/306323169285/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider'
-      gcp_service_account: 'tuf-publisher@projectsigstore-staging.iam.gserviceaccount.com'
+      gcp_service_account: 'v2-tuf-publisher@projectsigstore-staging.iam.gserviceaccount.com'
 
   test-deployed-gcs:
     needs: [deploy-to-gcs]

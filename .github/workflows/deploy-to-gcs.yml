@@ -41,8 +41,7 @@ jobs:
 
       - name: Upload repository to GCS
         run: |
-          BUCKET="gs://tuf-root-staging/"
-          LOAD_BALANCER="tuf-repo-cdn-lb"
+          BUCKET="gs://v2-tuf-root-staging/"
 
           # Upload metadata, make sure we upload timestamp last
           gcloud storage rsync --cache-control=no-store --recursive --exclude=timestamp.json \

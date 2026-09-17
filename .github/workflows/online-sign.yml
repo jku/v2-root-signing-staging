@@ -23,7 +23,7 @@ jobs:
         with:
           token: ${{ secrets.TUF_ON_CI_TOKEN || secrets.GITHUB_TOKEN }}
           gcp_workload_identity_provider: 'projects/306323169285/locations/global/workloadIdentityPools/github-actions-pool/providers/github-actions-provider'
-          gcp_service_account: 'tuf-signer@projectsigstore-staging.iam.gserviceaccount.com'
+          gcp_service_account: 'v2-tuf-signer@projectsigstore-staging.iam.gserviceaccount.com'
 
 
   update-issue:
